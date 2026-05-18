@@ -1,0 +1,8 @@
+/.envrc
+
+result
+result-*
+
+#*#
+*~
+/.direnv/
