@@ -31,10 +31,6 @@
             django_5
             ;
         };
-
-        pythonImportsCheck = [ "fontawesome_6" ];
-
-        pythonNamespaces = [ "fontawesome_6" ];
       };
     };
 }

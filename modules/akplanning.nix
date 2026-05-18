@@ -90,6 +90,7 @@
         inherit src;
 
         nativeBuildInputs = [
+          pkgs.gettext
         ];
 
         inherit dependencies;
@@ -99,6 +100,9 @@
 
           mkdir -p $out/lib
           cp -r $src $out/lib/akplanning
+          chmod -R +w $out/lib/akplanning
+          rm -rf $out/lib/akplanning/docs
+
           runHook postBuild
         '';
 
@@ -116,6 +120,11 @@
 
             runHook postInstall
           '';
+
+        postInstall = ''
+          python $out/lib/akplanning/manage.py collectstatic
+          python $out/lib/akplanning/manage.py compilemessages
+        '';
 
         nativeCheckInputs = lib.attrValues {
           inherit (python.pkgs)
