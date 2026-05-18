@@ -22,7 +22,6 @@
         packageOverrides = self: super: {
           django = super.django_5;
 
-          django-betterforms = null;
           django-bootstrap-datepicker-plus = null;
           django-docs = null;
           django-fontawesome6 = null;
@@ -31,6 +30,7 @@
 
           inherit (self'.packages)
             django-admin-logs
+            django-betterforms
 
             sphinxcontrib-django
             ;
