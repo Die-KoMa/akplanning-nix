@@ -22,7 +22,6 @@
         packageOverrides = self: super: {
           django = super.django_5;
 
-          django-docs = null;
           django-fontawesome6 = null;
           django-tex = null;
 
@@ -30,6 +29,7 @@
             django-admin-logs
             django-betterforms
             django-bootstrap-datepicker-plus
+            django-docs
             django-registration-redux
 
             sphinxcontrib-django
