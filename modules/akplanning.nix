@@ -21,8 +21,6 @@
       python = pkgs.python3Packages.python.override {
         packageOverrides = self: super: {
           django = super.django_5;
-
-          django-fontawesome6 = null;
           django-tex = null;
 
           inherit (self'.packages)
@@ -30,8 +28,8 @@
             django-betterforms
             django-bootstrap-datepicker-plus
             django-docs
+            django-fontawesome-6
             django-registration-redux
-
             sphinxcontrib-django
             ;
         };
@@ -60,7 +58,7 @@
           django-bootstrap5
           django-compressor
           django-debug-toolbar
-          django-fontawesome6
+          django-fontawesome-6
           django-libsass
           django-registration-redux
           django-simple-history
