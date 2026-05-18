@@ -22,7 +22,6 @@
         packageOverrides = self: super: {
           django = super.django_5;
 
-          django-admin-logs = null;
           django-betterforms = null;
           django-bootstrap-datepicker-plus = null;
           django-docs = null;
@@ -31,6 +30,8 @@
           django-tex = null;
 
           inherit (self'.packages)
+            django-admin-logs
+
             sphinxcontrib-django
             ;
         };
@@ -84,7 +85,7 @@
       };
     in
     {
-      packages.aktool = python.pkgs.buildPythonApplication {
+      packages.akplanning = python.pkgs.buildPythonApplication {
         name = "akplanning";
         version = "0-unstable-2026-05-18";
         pyproject = false;
