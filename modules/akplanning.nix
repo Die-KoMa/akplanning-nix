@@ -24,13 +24,13 @@
 
           django-docs = null;
           django-fontawesome6 = null;
-          django-registration-redux = null;
           django-tex = null;
 
           inherit (self'.packages)
             django-admin-logs
             django-betterforms
             django-bootstrap-datepicker-plus
+            django-registration-redux
 
             sphinxcontrib-django
             ;
