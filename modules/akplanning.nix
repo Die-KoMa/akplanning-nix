@@ -21,7 +21,6 @@
       python = pkgs.python3Packages.python.override {
         packageOverrides = self: super: {
           django = super.django_5;
-          django-tex = null;
 
           inherit (self'.packages)
             django-admin-logs
@@ -29,6 +28,7 @@
             django-bootstrap-datepicker-plus
             django-docs
             django-fontawesome-6
+            django-tex
             django-registration-redux
             sphinxcontrib-django
             ;
