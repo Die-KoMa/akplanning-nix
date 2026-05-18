@@ -35,15 +35,19 @@
         };
       };
 
-      texlive = pkgs.texliveBasic.withPackages (
-        ps:
-        lib.attrValues {
-          inherit (ps)
-            beamer
-            luatex
-            ;
-        }
-      );
+      texlive = pkgs.texlive.combine {
+        inherit (pkgs.texlive.pkgs)
+          collection-basic
+          collection-luatex
+          collection-latex
+          collection-latexrecommended
+          collection-latexextra
+          collection-fontsrecommended
+          collection-fontsextra
+          collection-langgerman
+          beamer
+          ;
+      };
 
       path = lib.makeBinPath [
         texlive
