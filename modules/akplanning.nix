@@ -6,6 +6,7 @@
 {
   perSystem =
     {
+      self',
       pkgs,
       ...
     }:
@@ -28,7 +29,10 @@
           django-fontawesome6 = null;
           django-registration-redux = null;
           django-tex = null;
-          sphinxcontrib-django = null;
+
+          inherit (self'.packages)
+            sphinxcontrib-django
+            ;
         };
       };
 
