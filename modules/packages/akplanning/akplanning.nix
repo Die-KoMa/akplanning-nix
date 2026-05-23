@@ -114,7 +114,7 @@
           runHook preBuild
 
           mkdir -p $out/lib
-          cp -r $src $out/lib/akplanning
+          cp -r . $out/lib/akplanning
           chmod -R +w $out/lib/akplanning
           rm -rf $out/lib/akplanning/docs
 

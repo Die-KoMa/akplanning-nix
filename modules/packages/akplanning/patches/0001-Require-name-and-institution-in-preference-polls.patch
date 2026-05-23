@@ -16,10 +16,10 @@ index 9139f89..f0c3af3 100644
          ordering = ['name']
  
 -    name = models.CharField(max_length=64, blank=True, verbose_name=_('Nickname'),
-+    name = models.CharField(max_length=64, blank=False, required=True, verbose_name=_('Nickname'),
++    name = models.CharField(max_length=64, blank=False, verbose_name=_('Nickname'),
                              help_text=_('Name to identify a participant by (in case of questions from the organizers)'))
 -    institution = models.CharField(max_length=128, blank=True, verbose_name=_('Institution'), help_text=_('Uni etc.'))
-+    institution = models.CharField(max_length=128, blank=False, required=True, verbose_name=_('Institution'), help_text=_('Uni etc.'))
++    institution = models.CharField(max_length=128, blank=False, verbose_name=_('Institution'), help_text=_('Uni etc.'))
  
      event = models.ForeignKey(to=Event, on_delete=models.CASCADE, verbose_name=_('Event'),
                                help_text=_('Associated event'))
