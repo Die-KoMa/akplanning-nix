@@ -1,4 +1,4 @@
-From ae7313cb4850960e69e8697dbb359ea2c31d8b4b Mon Sep 17 00:00:00 2001
+From a2b0109f8923118a2b431426e673d124400915b3 Mon Sep 17 00:00:00 2001
 From: Maximilian Marx <mmarx@wh2.tu-dresden.de>
 Date: Sat, 23 May 2026 16:46:58 +0200
 Subject: [PATCH 2/2] =?UTF-8?q?Reword=20=E2=80=9Crequired=E2=80=9D=20into?=
@@ -9,7 +9,8 @@ Content-Transfer-Encoding: 8bit
 
 ---
  AKPreference/locale/de_DE/LC_MESSAGES/django.po | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+ AKPreference/models.py                          | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/AKPreference/locale/de_DE/LC_MESSAGES/django.po b/AKPreference/locale/de_DE/LC_MESSAGES/django.po
 index e8df2fe..d974a3d 100644
@@ -26,6 +27,19 @@ index e8df2fe..d974a3d 100644
  
  #: AKPreference/models.py:113
  msgid "Preference"
+diff --git a/AKPreference/models.py b/AKPreference/models.py
+index 31255d9..3e785ab 100644
+--- a/AKPreference/models.py
++++ b/AKPreference/models.py
+@@ -108,7 +108,7 @@ class AKPreference(models.Model):
+         IGNORE = 0, _('Ignore')
+         PREFER = 1, _('Interested')
+         STRONG_PREFER = 2, _("Great interest")
+-        REQUIRED = 3, _("Required")
++        REQUIRED = 3, _("Required (AK Owner)")
+ 
+     preference = models.PositiveSmallIntegerField(verbose_name=_('Preference'), choices=PreferenceLevel.choices,
+                                              help_text=_('Preference level for the AK'),
 -- 
 2.51.2
 
