@@ -90,7 +90,7 @@
     in
     {
       devShells.akplanning = pkgs.mkShell {
-        inputsFrom = self'.packages.aktool;
+        inputsFrom = [ self'.packages.akplanning ];
       };
 
       packages.akplanning = python.pkgs.buildPythonApplication {
