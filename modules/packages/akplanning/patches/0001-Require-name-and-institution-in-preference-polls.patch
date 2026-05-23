@@ -1,4 +1,4 @@
-From 257ac9bedd19bddbebc4683afdf6c193469062ea Mon Sep 17 00:00:00 2001
+From 65fa65e66b92cca0b10045ce1190151017beec3c Mon Sep 17 00:00:00 2001
 From: Maximilian Marx <mmarx@wh2.tu-dresden.de>
 Date: Sat, 23 May 2026 16:26:50 +0200
 Subject: [PATCH 1/2] Require name and institution in preference polls
@@ -8,10 +8,10 @@ Subject: [PATCH 1/2] Require name and institution in preference polls
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/AKPreference/models.py b/AKPreference/models.py
-index cf4ccba..31255d9 100644
+index 9139f89..f0c3af3 100644
 --- a/AKPreference/models.py
 +++ b/AKPreference/models.py
-@@ -13,9 +13,9 @@ class EventParticipant(models.Model):
+@@ -12,9 +12,9 @@ class EventParticipant(models.Model):
          verbose_name_plural = _('Participants')
          ordering = ['name']
  
