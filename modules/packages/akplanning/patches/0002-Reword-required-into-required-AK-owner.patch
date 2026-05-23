@@ -1,0 +1,31 @@
+From ae7313cb4850960e69e8697dbb359ea2c31d8b4b Mon Sep 17 00:00:00 2001
+From: Maximilian Marx <mmarx@wh2.tu-dresden.de>
+Date: Sat, 23 May 2026 16:46:58 +0200
+Subject: [PATCH 2/2] =?UTF-8?q?Reword=20=E2=80=9Crequired=E2=80=9D=20into?=
+ =?UTF-8?q?=20=E2=80=9Crequired=20(AK=20owner)=E2=80=9D?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ AKPreference/locale/de_DE/LC_MESSAGES/django.po | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/AKPreference/locale/de_DE/LC_MESSAGES/django.po b/AKPreference/locale/de_DE/LC_MESSAGES/django.po
+index e8df2fe..d974a3d 100644
+--- a/AKPreference/locale/de_DE/LC_MESSAGES/django.po
++++ b/AKPreference/locale/de_DE/LC_MESSAGES/django.po
+@@ -114,8 +114,8 @@ msgid "Great interest"
+ msgstr "Großes Interesse"
+ 
+ #: AKPreference/models.py:106
+-msgid "Required"
+-msgstr "Erforderlich"
++msgid "Required (AK Owner)"
++msgstr "Erforderlich (AK-Leitung)"
+ 
+ #: AKPreference/models.py:113
+ msgid "Preference"
+-- 
+2.51.2
+

@@ -99,6 +99,11 @@
         pyproject = false;
         inherit src;
 
+        patches = [
+          ./patches/0001-Require-name-and-institution-in-preference-polls.patch
+          ./patches/0002-Reword-required-into-required-AK-owner.patch
+        ];
+
         nativeBuildInputs = [
           pkgs.gettext
         ];
